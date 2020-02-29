@@ -1,6 +1,7 @@
 mod dna;
 mod fib;
 mod fibd;
+mod gc;
 mod hamm;
 mod prot;
 mod revc;
@@ -21,4 +22,6 @@ fn main() {
     prot::run("data/rosalind_prot.txt");
     println!("\nFIBD:");
     fibd::run("data/rosalind_fibd.txt");
+    println!("\nGC:");
+    gc::run("data/rosalind_gc.txt");
 }
