@@ -1,5 +1,6 @@
 mod dna;
 mod fib;
+mod fibd;
 mod hamm;
 mod prot;
 mod revc;
@@ -18,4 +19,6 @@ fn main() {
     hamm::run("data/rosalind_hamm.txt");
     println!("\nPROT:");
     prot::run("data/rosalind_prot.txt");
+    println!("\nFIBD:");
+    fibd::run("data/rosalind_fibd.txt");
 }
