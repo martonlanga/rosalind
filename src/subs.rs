@@ -10,4 +10,5 @@ pub fn run(filename: &str) {
     for occ in shiftand.find_all(dna) {
         print!("{} ", occ + 1);
     }
+    println!();
 }

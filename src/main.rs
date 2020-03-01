@@ -1,3 +1,4 @@
+mod cons;
 mod dna;
 mod fib;
 mod fibd;
@@ -30,4 +31,6 @@ fn main() {
     iprb::run("data/rosalind_iprb.txt");
     println!("\nSUBS:");
     subs::run("data/rosalind_subs.txt");
+    println!("\nCONS:");
+    cons::run("data/rosalind_cons.txt");
 }
