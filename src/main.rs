@@ -7,6 +7,7 @@ mod iprb;
 mod prot;
 mod revc;
 mod rna;
+mod subs;
 
 fn main() {
     println!("DNA:");
@@ -27,4 +28,6 @@ fn main() {
     gc::run("data/rosalind_gc.txt");
     println!("\nIPRB:");
     iprb::run("data/rosalind_iprb.txt");
+    println!("\nSUBS:");
+    subs::run("data/rosalind_subs.txt");
 }
