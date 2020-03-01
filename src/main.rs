@@ -3,6 +3,7 @@ mod fib;
 mod fibd;
 mod gc;
 mod hamm;
+mod iprb;
 mod prot;
 mod revc;
 mod rna;
@@ -24,4 +25,6 @@ fn main() {
     fibd::run("data/rosalind_fibd.txt");
     println!("\nGC:");
     gc::run("data/rosalind_gc.txt");
+    println!("\nIPRB:");
+    iprb::run("data/rosalind_iprb.txt");
 }
