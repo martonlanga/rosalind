@@ -7,6 +7,7 @@ mod grph;
 mod hamm;
 mod iev;
 mod iprb;
+mod lcsm;
 mod prot;
 mod revc;
 mod rna;
@@ -39,4 +40,6 @@ fn main() {
     grph::run("data/rosalind_grph.txt");
     println!("\nIEV:");
     iev::run("data/rosalind_iev.txt");
+    println!("\nLCSM:");
+    lcsm::run("data/rosalind_lcsm.txt");
 }
