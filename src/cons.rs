@@ -1,5 +1,4 @@
 use bio::io::fasta;
-use std::fmt::Write;
 use std::path::Path;
 
 pub fn run(filename: &str) {
