@@ -3,6 +3,7 @@ mod dna;
 mod fib;
 mod fibd;
 mod gc;
+mod grph;
 mod hamm;
 mod iprb;
 mod prot;
@@ -33,4 +34,6 @@ fn main() {
     subs::run("data/rosalind_subs.txt");
     println!("\nCONS:");
     cons::run("data/rosalind_cons.txt");
+    println!("\nGRPH:");
+    grph::run("data/rosalind_grph.txt");
 }
