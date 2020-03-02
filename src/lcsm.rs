@@ -16,7 +16,7 @@ pub fn run(filename: &str) {
     let s = &arr[0];
     let len = s.len();
     let mut res = vec![];
-    println!("here");
+
     for i in 0..len {
         for j in i + 1..len {
             let stem = &s[i..j];
