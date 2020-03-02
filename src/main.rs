@@ -5,6 +5,7 @@ mod fibd;
 mod gc;
 mod grph;
 mod hamm;
+mod iev;
 mod iprb;
 mod prot;
 mod revc;
@@ -36,4 +37,6 @@ fn main() {
     cons::run("data/rosalind_cons.txt");
     println!("\nGRPH:");
     grph::run("data/rosalind_grph.txt");
+    println!("\nIEV:");
+    iev::run("data/rosalind_iev.txt");
 }
