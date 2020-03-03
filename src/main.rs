@@ -13,6 +13,7 @@ mod prob;
 mod prot;
 mod prtm;
 mod revc;
+mod revp;
 mod rna;
 mod subs;
 
@@ -50,6 +51,8 @@ fn main() {
     // orf::run("data/rosalind_orf.txt");
     // println!("\nPRTM:");
     // prtm::run("data/rosalind_prtm.txt");
-    println!("\nPROB:");
-    prob::run("data/rosalind_prob.txt");
+    // println!("\nPROB:");
+    // prob::run("data/rosalind_prob.txt");
+    println!("\nREVP:");
+    revp::run("data/rosalind_revp.txt");
 }
