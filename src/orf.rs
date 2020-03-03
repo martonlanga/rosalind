@@ -1,4 +1,3 @@
-// plz forgive me for this code — it's late a night & am super tired but wanted to finish dis
 use bio::io::fasta;
 use std::collections::HashMap;
 use std::collections::HashSet;
@@ -82,43 +81,7 @@ pub fn run(filename: &str) {
         let record = String::from_utf8(record.seq().to_vec()).unwrap();
         let record = record.replace("T", "U");
         let mut res = HashSet::new();
-        for i in (0..record.len() - 3).step_by(3) {
-            match table.get(&record[i..i + 3]) {
-                Some(val) if val as &str == "M" => {
-                    let mut current = String::from("");
-                    for j in (i..record.len() - 3).step_by(3) {
-                        match table.get(&record[j..j + 3]) {
-                            Some(val) if val as &str == "Stop" => {
-                                res.insert(current);
-                                break;
-                            }
-                            Some(val) => current.push_str(val),
-                            _ => println!("Invalid."),
-                        }
-                    }
-                }
-                _ => (),
-            }
-        }
-        for i in (1..record.len() - 2).step_by(3) {
-            match table.get(&record[i..i + 3]) {
-                Some(val) if val as &str == "M" => {
-                    let mut current = String::from("");
-                    for j in (i..record.len() - 3).step_by(3) {
-                        match table.get(&record[j..j + 3]) {
-                            Some(val) if val as &str == "Stop" => {
-                                res.insert(current);
-                                break;
-                            }
-                            Some(val) => current.push_str(val),
-                            _ => println!("Invalid."),
-                        }
-                    }
-                }
-                _ => (),
-            }
-        }
-        for i in (2..record.len() - 2).step_by(3) {
+        for i in 0..record.len() - 3 {
             match table.get(&record[i..i + 3]) {
                 Some(val) if val as &str == "M" => {
                     let mut current = String::from("");
@@ -139,7 +102,8 @@ pub fn run(filename: &str) {
         let record = record.replace("A", "0").replace("U", "A").replace("0", "U");
         let record = record.replace("C", "0").replace("G", "C").replace("0", "G");
         let record = record.chars().rev().collect::<String>();
-        for i in (0..record.len() - 3).step_by(3) {
+
+        for i in 0..record.len() - 3 {
             match table.get(&record[i..i + 3]) {
                 Some(val) if val as &str == "M" => {
                     let mut current = String::from("");
@@ -157,42 +121,7 @@ pub fn run(filename: &str) {
                 _ => (),
             }
         }
-        for i in (1..record.len() - 3).step_by(3) {
-            match table.get(&record[i..i + 3]) {
-                Some(val) if val as &str == "M" => {
-                    let mut current = String::from("");
-                    for j in (i..record.len() - 3).step_by(3) {
-                        match table.get(&record[j..j + 3]) {
-                            Some(val) if val as &str == "Stop" => {
-                                res.insert(current);
-                                break;
-                            }
-                            Some(val) => current.push_str(val),
-                            _ => println!("Invalid."),
-                        }
-                    }
-                }
-                _ => (),
-            }
-        }
-        for i in (2..record.len() - 3).step_by(3) {
-            match table.get(&record[i..i + 3]) {
-                Some(val) if val as &str == "M" => {
-                    let mut current = String::from("");
-                    for j in (i..record.len() - 3).step_by(3) {
-                        match table.get(&record[j..j + 3]) {
-                            Some(val) if val as &str == "Stop" => {
-                                res.insert(current);
-                                break;
-                            }
-                            Some(val) => current.push_str(val),
-                            _ => println!("Invalid."),
-                        }
-                    }
-                }
-                _ => (),
-            }
-        }
+
         for r in &res {
             println!("{}", r);
         }
