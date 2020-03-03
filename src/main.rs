@@ -9,12 +9,14 @@ mod iev;
 mod iprb;
 mod lcsm;
 mod orf;
+mod prob;
 mod prot;
 mod prtm;
 mod revc;
 mod rna;
 mod subs;
 
+#[allow(dead_code)]
 fn main() {
     // println!("DNA:");
     // dna::count("data/rosalind_dna.txt");
@@ -46,6 +48,8 @@ fn main() {
     // lcsm::run("data/rosalind_lcsm.txt");
     // println!("\nORF:");
     // orf::run("data/rosalind_orf.txt");
-    println!("\nPRTM:");
-    prtm::run("data/rosalind_prtm.txt");
+    // println!("\nPRTM:");
+    // prtm::run("data/rosalind_prtm.txt");
+    println!("\nPROB:");
+    prob::run("data/rosalind_prob.txt");
 }
