@@ -10,6 +10,7 @@ mod iprb;
 mod lcsm;
 mod orf;
 mod prot;
+mod prtm;
 mod revc;
 mod rna;
 mod subs;
@@ -25,8 +26,8 @@ fn main() {
     // fib::run("data/rosalind_fib.txt");
     // println!("\nHAMM:");
     // hamm::run("data/rosalind_hamm.txt");
-    println!("\nPROT:");
-    prot::run("data/rosalind_prot.txt");
+    // println!("\nPROT:");
+    // prot::run("data/rosalind_prot.txt");
     // println!("\nFIBD:");
     // fibd::run("data/rosalind_fibd.txt");
     // println!("\nGC:");
@@ -43,6 +44,8 @@ fn main() {
     // iev::run("data/rosalind_iev.txt");
     // println!("\nLCSM:");
     // lcsm::run("data/rosalind_lcsm.txt");
-    println!("\nORF:");
-    orf::run("data/rosalind_orf.txt");
+    // println!("\nORF:");
+    // orf::run("data/rosalind_orf.txt");
+    println!("\nPRTM:");
+    prtm::run("data/rosalind_prtm.txt");
 }
